@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{484A21C2-86BD-4FAE-935D-99AA74D84CF1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonLib</RootNamespace>
+    <AssemblyName>CommonLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\CommonLib.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="M2Mqtt.Net">
+      <HintPath>..\..\WpfCentralizedMonitorin\bin\Debug\M2Mqtt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bean\ApiJson.cs" />
+    <Compile Include="bean\CallType.cs" />
+    <Compile Include="bean\CarCardMsg.cs" />
+    <Compile Include="bean\CarMessage.cs" />
+    <Compile Include="bean\CementType.cs" />
+    <Compile Include="bean\CommonParameters.cs" />
+    <Compile Include="bean\ConShipment.cs" />
+    <Compile Include="bean\DeliveryOrder.cs" />
+    <Compile Include="bean\DeviceConfig.cs" />
+    <Compile Include="bean\DeviceTypeEnum.cs" />
+    <Compile Include="bean\EmptyCarLeavingApply.cs" />
+    <Compile Include="bean\FillPackpageRequest.cs" />
+    <Compile Include="bean\GateData.cs" />
+    <Compile Include="bean\ICCardReg.cs" />
+    <Compile Include="bean\ICCardType.cs" />
+    <Compile Include="bean\Image.cs" />
+    <Compile Include="bean\ImageType.cs" />
+    <Compile Include="bean\InfraException.cs" />
+    <Compile Include="bean\LorryInfo.cs" />
+    <Compile Include="bean\Material.cs" />
+    <Compile Include="bean\MaterialInfo.cs" />
+    <Compile Include="bean\NeedMakeUpNum.cs" />
+    <Compile Include="bean\OrderStatus.cs" />
+    <Compile Include="bean\PoundDetail.cs" />
+    <Compile Include="bean\PoundOrder.cs" />
+    <Compile Include="bean\PoundTicket.cs" />
+    <Compile Include="bean\PoundTicketDetail.cs" />
+    <Compile Include="bean\PoundTicketDetailReq.cs" />
+    <Compile Include="bean\PrintTicket.cs" />
+    <Compile Include="bean\PropertyChangedBase.cs" />
+    <Compile Include="bean\QueryWaiting.cs" />
+    <Compile Include="bean\QueueTicket.cs" />
+    <Compile Include="bean\ReICInfo.cs" />
+    <Compile Include="bean\ReqPoundDetail.cs" />
+    <Compile Include="bean\RequestInfraQuery.cs" />
+    <Compile Include="bean\RequestRFID.cs" />
+    <Compile Include="bean\RequestTareWeight.cs" />
+    <Compile Include="bean\RequestUser.cs" />
+    <Compile Include="bean\RequestVehicle.cs" />
+    <Compile Include="bean\Result.cs" />
+    <Compile Include="bean\ResultCode.cs" />
+    <Compile Include="bean\ResultRFIDType.cs" />
+    <Compile Include="bean\RFIDTag.cs" />
+    <Compile Include="bean\RFIDType.cs" />
+    <Compile Include="bean\ServiceType.cs" />
+    <Compile Include="bean\SignStatus.cs" />
+    <Compile Include="bean\SmallTicket.cs" />
+    <Compile Include="bean\SubSystemCode.cs" />
+    <Compile Include="bean\TareWeightApply.cs" />
+    <Compile Include="bean\TareWeightExQuery.cs" />
+    <Compile Include="bean\UnFillPackpageRequest.cs" />
+    <Compile Include="bean\User.cs" />
+    <Compile Include="bean\VehicleDetail.cs" />
+    <Compile Include="bean\WeighVerification.cs" />
+    <Compile Include="bean\ICCard.cs" />
+    <Compile Include="bean\ICValidate.cs" />
+    <Compile Include="JsonApi.cs" />
+    <Compile Include="PlatformAPI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="bean\SignDetail.cs" />
+    <Compile Include="util\HttpUtil.cs" />
+    <Compile Include="util\StringToMD5Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

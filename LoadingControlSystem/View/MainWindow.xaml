@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920" HorizontalAlignment="Center">
     <Grid>
-        <Grid x:Name="MainGrid" HorizontalAlignment="Left" Height="1039" VerticalAlignment="Top" Width="1467" OpacityMask="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+        <Grid x:Name="MainGrid" HorizontalAlignment="Left" Height="1039" VerticalAlignment="Top" Width="1467" OpacityMask="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Loaded="MainGrid_Loaded">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition />

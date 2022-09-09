@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,7 +27,31 @@ namespace LoadingControlSystem
         {
             InitializeComponent();
             AddBorder();
+            //ICcard ic = ICcard.GetInstance(0,9600);
+            //ic.IC_Connect();
+            //ic.GetICDate();
+            //ic.IC_Close();
         }
+     
+
+        private void MainGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            Thread terminalThread = new Thread(terminal);
+            terminalThread.Start();
+          
+        }
+
+        /// <summary>
+        /// 刷卡线程
+        /// </summary>
+        public void terminal()
+        {
+            while (true)
+            {
+                Thread.Sleep(300);
+            }
+        }
+
         /// <summary>
         /// grid表格画线
         /// </summary>
@@ -34,7 +59,7 @@ namespace LoadingControlSystem
         {
             int rows = MainGrid.RowDefinitions.Count;
             int columns = MainGrid.ColumnDefinitions.Count;
-           
+
             for (int i = 0; i < rows; i++)
             {
                 if (i != rows - 1)
