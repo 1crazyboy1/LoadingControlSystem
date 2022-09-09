@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LoadingControlSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920" HorizontalAlignment="Center">
+        Title="骨料装车控制系统" Height="1020" Width="1920" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Closed="Window_Closed">
     <Grid>
-        <Grid x:Name="MainGrid" HorizontalAlignment="Left" Height="1039" VerticalAlignment="Top" Width="1467" OpacityMask="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Loaded="MainGrid_Loaded">
+        <Grid x:Name="MainGrid" HorizontalAlignment="Left" Height="944" VerticalAlignment="Top" Width="1467" OpacityMask="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Loaded="MainGrid_Loaded" Margin="0,37,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition />
@@ -17,24 +17,19 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition/>
+                <ColumnDefinition Width="298*"/>
+                <ColumnDefinition Width="390*" />
+                <ColumnDefinition Width="389*" />
+                <ColumnDefinition Width="390*"/>
             </Grid.ColumnDefinitions>
-            <Button Content="刷卡" VerticalAlignment="Bottom" Margin="0,0,-318,16" Grid.Column="3" Grid.Row="5" Height="48" HorizontalAlignment="Right" Width="187"/>
-            <Label Content="品种"   HorizontalAlignment="Left" Margin="49,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.641,-1.478" Height="23" Width="69"/>
+            <Button Content="刷卡" Margin="497,61,-294,43" Grid.Column="3" Grid.Row="5"/>
+            <Label Content="品种"   HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.641,-1.478" Height="23" Width="69"/>
             <Label Content="车牌号" HorizontalAlignment="Left" Margin="44,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.641,-1.478" Height="23" Width="69" Grid.Column="1"/>
             <Label Content="物料" HorizontalAlignment="Left" Margin="39,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.641,-1.478" Height="23" Width="69" Grid.Column="2"/>
             <Label Content="认证状态" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.641,-1.478" Height="23" Width="69" Grid.Column="3"/>
-            <Label Content="13石子" HorizontalAlignment="Left" Margin="84,30,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-            <Label Content="12#石子" HorizontalAlignment="Left" Margin="84,10,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-            <Label Content="05#石子" HorizontalAlignment="Left" Margin="84,28,0,0" Grid.Row="3" VerticalAlignment="Top"/>
-            <Label Content="石粉" HorizontalAlignment="Left" Margin="84,10,0,0" Grid.Row="4" VerticalAlignment="Top"/>
-            <Label Content="除泥废料" HorizontalAlignment="Left" Margin="84,34,0,0" Grid.Row="5" VerticalAlignment="Top"/>
         </Grid>
-        <GroupBox x:Name="groupbox1"  Header="日志" HorizontalAlignment="Left" Height="954" Margin="1472,10,0,0" VerticalAlignment="Top" Width="438">
-            <RichTextBox HorizontalAlignment="Left" Height="912" Margin="8,0,0,16" VerticalAlignment="Bottom" Width="418">
+        <GroupBox x:Name="groupbox1"  Header="日志" HorizontalAlignment="Left" Height="964" Margin="1472,0,0,0" VerticalAlignment="Top" Width="438">
+            <RichTextBox HorizontalAlignment="Right" Height="844" Margin="0,0,4,88" VerticalAlignment="Bottom" Width="418">
                 <FlowDocument>
                     <Paragraph>
                         <Run Text="RichTextBox"/>
@@ -42,6 +37,21 @@
                 </FlowDocument>
             </RichTextBox>
         </GroupBox>
+        <Grid>
 
+            <!--停靠布局，让菜单栏和工具栏位于窗口顶部-->
+            <Menu DockPanel.Dock="Top" Margin="0,0,447,945">
+                <MenuItem Header="菜单">
+                    <!--菜单项为MenuItem，文字使用属性 Header-->
+                    <MenuItem Name="menu" Header="菜单" Click="menuOpen_Click"/>
+                    <MenuItem Header="系统设置"></MenuItem>
+                    <MenuItem Header="摄像头设置"></MenuItem>
+                    <MenuItem Header="刷卡设置"></MenuItem>
+                </MenuItem>
+
+            </Menu>
+
+
+        </Grid>
     </Grid>
 </Window>

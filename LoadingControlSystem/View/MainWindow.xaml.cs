@@ -27,6 +27,8 @@ namespace LoadingControlSystem
         {
             InitializeComponent();
             AddBorder();
+
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             //ICcard ic = ICcard.GetInstance(0,9600);
             //ic.IC_Connect();
             //ic.GetICDate();
@@ -118,6 +120,16 @@ namespace LoadingControlSystem
                     }
                 }
             }
+        }
+
+        private void menuOpen_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
